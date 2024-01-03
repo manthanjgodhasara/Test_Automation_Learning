@@ -33,4 +33,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run Cucumber Tests
-      run: mvn test -Dcucumber.filter.tags=="${{ github.event.inputs.tag }}"
+      run: mvn test -Dcucumber.filter.tags="${{ github.event.inputs.tag }}"
