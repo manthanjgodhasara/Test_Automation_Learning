@@ -11,7 +11,7 @@ public class StepDefinitions {
     WebDriver driver;
 
     public StepDefinitions(){
-        driver = WebDriverManager.getDriver();
+        driver = DriverManager.getDriver();
     }
 
 
