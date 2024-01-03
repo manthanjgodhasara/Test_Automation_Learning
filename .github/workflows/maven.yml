@@ -17,7 +17,6 @@ on:
     inputs:
       tag:
         description: 'Tag for Cucumber tests'
-        required: true
 
 jobs:
   build:
