@@ -3,7 +3,7 @@ Feature: Sample Feature
   @tag1
   Scenario: Verify Google Title
     Given I open the Google website
-    Then the title should be "Googlyy"
+    Then the title should be "Google"
 
   @tag2
   Scenario: Verify Bing Title
