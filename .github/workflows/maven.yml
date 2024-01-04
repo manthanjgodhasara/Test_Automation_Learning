@@ -37,7 +37,7 @@ jobs:
         mkdir -p bin
         curl -L "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/linux64/chromedriver-linux64.zip" -o "bin/chromedriver.zip"
         unzip "bin/chromedriver.zip" -d "bin"
-        chmod +x "bin/chromedriver"
+        chmod +x "bin/chromedriver-linux64/chromedriver"
 
     - name: Run Cucumber Tests
       run: |
