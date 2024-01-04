@@ -125,27 +125,3 @@ options.addArguments("--headless");: Adds the argument --headless to the Chrome 
 WebDriverManager.chromedriver().setup();: Uses the WebDriverManager library to automatically download and set up the ChromeDriver executable. This helps in managing the WebDriver binaries without manual downloads.
 
 driver = new ChromeDriver(options);: Initializes a new instance of the ChromeDriver, passing the configured ChromeOptions to launch the Chrome browser in headless mode.
-
-#### Code for pom.xml
-
-<pre>
-  
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version> <!-- Use the latest version -->
-            <configuration>
-                <systemPropertyVariables>
-                    <webdriver.chrome.driver>${webdriver.chrome.driver}</webdriver.chrome.driver>
-                </systemPropertyVariables>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-  
-</pre>
-
-<systemPropertyVariables>: It is used to set system properties for the test execution. In this case, it sets the webdriver.chrome.driver system property to the value of the Maven property ${webdriver.chrome.driver}.
-${webdriver.chrome.driver} is a placeholder for the path to the ChromeDriver executable.
