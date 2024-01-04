@@ -9,7 +9,6 @@ The main aim of this project is to create a CI/CD pipeline to execute Selenium t
 #### YML file to create a workflow
 
 <pre>
-'''yaml
 name: Cucumber Tests
 
 on:
@@ -46,5 +45,4 @@ jobs:
     - name: Run Cucumber Tests
       run: |
         mvn test -Dwebdriver.chrome.driver=$GITHUB_WORKSPACE/bin/chromedriver -Dcucumber.filter.tags="${{ github.event.inputs.tag }}"
-'''
 </pre>
