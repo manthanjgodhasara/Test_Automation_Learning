@@ -128,7 +128,8 @@ driver = new ChromeDriver(options);: Initializes a new instance of the ChromeDri
 
 #### Code for pom.xml
 
-'''xml
+<pre>
+  
 <build>
     <plugins>
         <plugin>
@@ -143,6 +144,8 @@ driver = new ChromeDriver(options);: Initializes a new instance of the ChromeDri
         </plugin>
     </plugins>
 </build>
+  
+</pre>
 
 <systemPropertyVariables>: It is used to set system properties for the test execution. In this case, it sets the webdriver.chrome.driver system property to the value of the Maven property ${webdriver.chrome.driver}.
 ${webdriver.chrome.driver} is a placeholder for the path to the ChromeDriver executable.
