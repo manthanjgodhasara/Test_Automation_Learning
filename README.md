@@ -46,4 +46,5 @@ jobs:
     - name: Run Cucumber Tests
       run: |
         mvn test -Dwebdriver.chrome.driver=$GITHUB_WORKSPACE/bin/chromedriver -Dcucumber.filter.tags="${{ github.event.inputs.tag }}"
+'''
 </pre>
