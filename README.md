@@ -108,3 +108,20 @@ Downloads ChromeDriver for Selenium tests. It creates a bin directory, downloads
 </pre>
 
 Runs Cucumber tests using Maven. It sets the path to the ChromeDriver and includes a Cucumber tag filter based on the input provided during the workflow dispatch.
+
+#### Code for webdriver
+
+<pre>
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless");
+WebDriverManager.chromedriver().setup();
+driver = new ChromeDriver(options);
+</pre>
+
+ChromeOptions options = new ChromeOptions();: Creates an instance of ChromeOptions, which is used to configure various Chrome browser settings.
+
+options.addArguments("--headless");: Adds the argument --headless to the Chrome options. This makes the browser run in headless mode, meaning it operates without a graphical user interface.
+
+WebDriverManager.chromedriver().setup();: Uses the WebDriverManager library to automatically download and set up the ChromeDriver executable. This helps in managing the WebDriver binaries without manual downloads.
+
+driver = new ChromeDriver(options);: Initializes a new instance of the ChromeDriver, passing the configured ChromeOptions to launch the Chrome browser in headless mode.
